@@ -4,12 +4,12 @@ pragma solidity ^0.8.20;
 
 import {StdInvariant, Test} from "forge-std/Test.sol";
 
-contract OpenInvariants is StdInvariant, Test {
-    function setUp() public {
-        // code here
-    }
+// contract OpenInvariants is StdInvariant, Test {
+//     function setUp() public {
+//         // code here
+//     }
 
-    function invariant_something() public {
-        // code here
-    }
-}
+//     function invariant_something() public {
+//         // code here
+//     }
+// }
