@@ -19,7 +19,8 @@
 // public
 // internal
 // private
-// view & pure functions
+// internal/private view & pure functions
+// external/public view & pure functions
 
 pragma solidity ^0.8.20;
 
@@ -64,10 +65,10 @@ contract Contract {
     //////////////////////////////////////////////////////////////*/
 
     /*//////////////////////////////////////////////////////////////
-                  PRIVATE/INTERNAL VIEW/PURE FUNCTIONS
+                 PRIVATE/INTERNAL VIEW & PURE FUNCTIONS
     //////////////////////////////////////////////////////////////*/
 
     /*//////////////////////////////////////////////////////////////
-                  EXTERNAL/PUBLIC VIEW/PURE FUNCTIONS
+                 EXTERNAL/PUBLIC VIEW & PURE FUNCTIONS
     //////////////////////////////////////////////////////////////*/
 }
