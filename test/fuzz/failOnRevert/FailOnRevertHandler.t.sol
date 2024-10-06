@@ -13,4 +13,3 @@ contract FailOnRevertHandler is Test {
         // code here
     }
 }
-
