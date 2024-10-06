@@ -31,17 +31,35 @@ format :; forge fmt
 
 anvil :; anvil -m 'test test test test test test test test test test test junk' --steps-tracing --block-time 1
 
+
+#/*//////////////////////////////////////////////////////////////
+#                          DEPLOYEMENT
+#//////////////////////////////////////////////////////////////*/
+
+# Deploy to Anvil
+## make anvil
+## make deploy
 deploy:
 	@forge script script/<SCRIPT_NAME>.s.sol:<CONTRACT_NAME> $(NETWORK_ARGS)
 
 NETWORK_ARGS := --rpc-url http://localhost:8545 --private-key $(DEFAULT_ANVIL_KEY) --broadcast
 
-# make deploy ARGS="--network sepolia"
+# Deploy to Sepolia
+## make deploy ARGS="--network sepolia"
 ifeq ($(findstring --network sepolia,$(ARGS)),--network sepolia)
 	NETWORK_ARGS := --rpc-url $(SEPOLIA_RPC_URL) --account $(ACCOUNT) --broadcast --verify --etherscan-api-key $(ETHERSCAN_API_KEY) -vvvv
 endif
 
+
+#/*//////////////////////////////////////////////////////////////
+#                          INTERACTIONS
+#//////////////////////////////////////////////////////////////*/
+
+# Address of the function caller goes here. Just put in $(DEFAULT_ANVIL_KEY) or $(SEPOLIA_ADDRESS)
 SENDER_ADDRESS := <SENDER_ADDRESS>
- 
+
+# Call function-name of last deployed contract
+## Anvil: make function-name
+## Sepolia: make function-name ARGS="--network sepolia"
 function-name:
 	@forge script script/Interactions.s.sol:<CONTRACT_NAME> --sender $(SENDER_ADDRESS) $(NETWORK_ARGS)
