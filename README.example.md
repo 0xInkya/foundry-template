@@ -1,8 +1,8 @@
-# Foundry Template
+# Repo Name
 
 # Installation
 ```bash
-git clone https://github.com/0xInkya/foundry-template.git
+git clone repo-url
 ```
 
 ```bash
